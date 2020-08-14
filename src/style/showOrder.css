@@ -9,7 +9,7 @@
 .showOrder .firstLine{
     background-color: gray;
 }
-.showOrder button{
+.showOrder input[type=submit]{
     width: 100px;
     height: 50px;
     background-color: rgb(223, 221, 221);

@@ -5,10 +5,14 @@ import '../style/showOrder.css';
 class showOrder extends Component {
     state = {
         products:[
-            {name:'可乐1', singlePrice:1 , amount:2 , unit:'瓶' },
-            {name:'可乐2', singlePrice:1 , amount:1 , unit:'瓶' },
-            {name:'可乐4', singlePrice:1 , amount:5 , unit:'瓶' },
+            {name:'可乐1', singlePrice:1 , amount:2 , unit:'瓶', id:1 },
+            {name:'可乐2', singlePrice:1 , amount:1 , unit:'瓶', id:2},
+            {name:'可乐4', singlePrice:1 , amount:5 , unit:'瓶', id:3 },
         ]
+    }
+
+    deleteItem = (props) => {
+
     }
       
   render() {
@@ -22,27 +26,15 @@ class showOrder extends Component {
                     <td>单位</td>
                     <td>操作</td>
                 </tr>
-                <tr>
-                    <td>{this.state.products[0].name}</td>
-                    <td>{this.state.products[0].singlePrice}</td>
-                    <td>{this.state.products[0].amount}</td>
-                    <td>{this.state.products[0].unit}</td>
-                    <td><button>删除</button></td>
-                </tr>
-                <tr>
-                    <td>{this.state.products[1].name}</td>
-                    <td>{this.state.products[1].singlePrice}</td>
-                    <td>{this.state.products[1].amount}</td>
-                    <td>{this.state.products[1].unit}</td>
-                    <td><button>删除</button></td>
-                </tr>
-                <tr>
-                    <td>{this.state.products[2].name}</td>
-                    <td>{this.state.products[2].singlePrice}</td>
-                    <td>{this.state.products[2].amount}</td>
-                    <td>{this.state.products[2].unit}</td>
-                    <td><button>删除</button></td>
-                </tr>
+                {this.state.products.map( (product) =>
+                    <tr>
+                        <td>{product.name}</td>
+                        <td>{product.singlePrice}</td>
+                        <td>{product.amount}</td>
+                        <td>{product.unit}</td>
+                        <td><input type="submit" value="删除" onClick={this.deleteItem}></input></td>
+                    </tr>
+                )}               
             </table>
         </div>
     );
