@@ -1,0 +1,21 @@
+.showOrder table {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 100px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+.showOrder .firstLine{
+    background-color: gray;
+}
+.showOrder button{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(223, 221, 221);
+    color: red;
+    line-height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
